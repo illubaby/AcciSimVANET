@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Option and Redirect</title>
+    <script type="text/javascript">
+        function redirectToPage() {
+            var selection = document.getElementById("optionSelect").value;
+            switch(selection) {
+                case "option1":
+                    window.location.href = "http://example.com/page1";
+                    break;
+                case "option2":
+                    window.location.href = "http://example.com/page2";
+                    break;
+                case "option3":
+                    window.location.href = "http://example.com/page3";
+                    break;
+                default:
+                    alert("No option selected!");
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <select id="optionSelect">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <button onclick="redirectToPage()">Go to Selected Page</button>
+</body>
+</html>
